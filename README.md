@@ -1,53 +1,42 @@
-# شِفرة — Shafrah
+# Shafrah
 
-لعبة كلمات عربية مستوحاة من Codenames، مبنية لنظام iOS.
+Shafrah is a real-time multiplayer social game built with SwiftUI and Firebase Realtime Database. Players compete through strategy, communication, and word-guessing mechanics in a fast-paced competitive experience.
 
----
+## Features
 
-## عن التطبيق
+- Real-time multiplayer synchronization using Firebase Realtime Database
+- 4-player team mode (Red Team vs Blue Team)
+- Competitive 2-player mode with alternating spy and agent roles
+- 4-digit room code system for quick matchmaking
+- Black-word elimination mechanic
+- Optional in-game timer for added challenge
+- Arabic RTL interface with Amiri font support
+- Confetti victory animations using SPConfetti
+- Smooth and responsive SwiftUI user interface
 
-شِفرة لعبة اجتماعية تعتمد على الذكاء والتواصل. يتنافس فريقان أو لاعبان عبر الإنترنت في نفس اللحظة — الجاسوس يعطي إشارة، والعميل يخمّن الكلمات الصحيحة قبل الوقوع في فخ الكلمة السوداء.
+## Technologies Used
 
----
+| Technology | Purpose |
+|------------|---------|
+| SwiftUI | User Interface Development |
+| Firebase Realtime Database | Real-time Multiplayer Synchronization |
+| MVVM Architecture | Application Structure & State Management |
+| SPConfetti | Win Animations |
+| Git & GitHub | Version Control |
 
-## المميزات
+## Multiplayer System
 
-- 🎮 **وضع 4 لاعبين** — فريقان (أحمر وأزرق)، كل فريق جاسوس وعملاء
-- ⚔️ **وضع تنافسي لاعبين** — لاعبان يتبادلان دوري الجاسوس والعميل كل دور
-- 🔴 **مزامنة فورية** — عبر Firebase Realtime Database بدون تأخير
-- 🚪 **بدون تسجيل دخول** — فقط اسم ورمز روم من 4 أرقام
-- 💀 **الكلمة السوداء** — اكشفها وتخسر فوراً
-- ⏱️ **تايمر اختياري** — يضيف ضغطاً على الفريق المخمّن
-- 🎉 **تأثيرات فوز** — confetti عند الفوز
-- 🌙 **تصميم عربي** — واجهة RTL كاملة بخط Amiri
+Shafrah uses Firebase Realtime Database to synchronize gameplay instantly between players without requiring authentication.
 
----
+### How It Works
+1. A player creates a room
+2. A unique 4-digit room code is generated
+3. Other players join using the same room code
+4. Game state updates are synchronized in real time across all devices
 
-## التقنيات المستخدمة
+## Project Structure
 
-| التقنية | الاستخدام |
-|---|---|
-| SwiftUI | واجهة المستخدم |
-| Firebase Realtime Database | المزامنة الفورية بين اللاعبين |
-| MVVM | نمط المعمارية |
-| SPConfetti | تأثيرات الفوز |
-
----
-
-## كيف يشتغل الـ Multiplayer
-
-لا يوجد تسجيل دخول أو Apple ID — المزامنة تعمل عبر **رمز الروم** فقط:
-
-1. اللاعب الأول ينشئ روم ← يتولد رمز 4 أرقام
-2. يشارك الرمز مع أصدقائه
-3. كل لاعب يكتب الرمز ← يدخل نفس اللعبة
-4. Firebase يزامن كل حركة فوراً على جميع الأجهزة
-
----
-
-## هيكل المشروع
-
-```
+```plaintext
 Shafrah/
 ├── Models/
 │   ├── Card.swift
@@ -66,19 +55,15 @@ Shafrah/
 │   └── FirebaseManager.swift
 └── Resources/
     └── ArabicWords.swift
-```
 
+## Developer
+Wasan Hamoud
 
----
-
-## المطور
-
-**وسن حمود**  
-📧 wasan5hm5@icloud.com  
-🔗 [صفحة الدعم](https://www.notion.so/Shafrah-Support-3374593e1cc8801dba6cf85bd2a92ca1)
+📧 wasan5hm5@icloud.com    
+🔗 [Support Page](https://www.notion.so/Shafrah-Support-3374593e1cc8801dba6cf85bd2a92ca1)
 
 ---
 
-## الترخيص
+## License
 
-هذا المشروع خاص وجميع الحقوق محفوظة © 2026 وسن حمود
+This project is private and all rights are reserved © 2026 Wasan Hamoud
